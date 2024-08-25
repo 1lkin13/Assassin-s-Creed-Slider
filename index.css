@@ -1,0 +1,187 @@
+section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.main-content {
+    width: 50%;
+}
+.Text {
+    width: 90%;
+    height: 500px;
+    margin: 50px auto;
+    padding-top: 50px!important;
+}
+.Text i {
+    font-size: 70px;
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(13, 31, 47);
+    font-weight: 700;
+    transition: 1s;
+}
+.Text i:hover {
+    color:rgb(229, 0, 0);
+    transition: 1s;
+}
+.Yazi {
+    width: 90%;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    transition: background .4s ease-in;
+}
+
+input[type=radio] {
+    display: none;
+}
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+.container {
+    width: 50%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+img {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+#item-1:checked ~ .cards #song-5,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2,
+#item-4:checked ~ .cards #song-3,
+#item-5:checked ~ .cards #song-1 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 1;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-4,
+#item-4:checked ~ .cards #song-5,
+#item-5:checked ~ .cards #song-4 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 1;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3,
+#item-4:checked ~ .cards #song-4,
+#item-5:checked ~ .cards #song-5 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #song-1 img,
+#item-2:checked ~ .cards #song-2 img,
+#item-3:checked ~ .cards #song-3 img,
+#item-4:checked ~ .cards #song-4 img,
+#item-5:checked ~ .cards #song-5 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: rgb(0, 136, 255); /* veya seçtiğiniz bir renk */
+}
+
+
+
+.button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+.button-40 a{
+    text-decoration: none;
+    color: white;
+}
